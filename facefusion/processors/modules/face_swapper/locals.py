@@ -12,4 +12,3 @@ LOCALS : Locals =\
 		}
 	}
 }
-Int
