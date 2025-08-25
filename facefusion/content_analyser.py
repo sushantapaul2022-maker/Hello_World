@@ -152,7 +152,7 @@ def analyse_video(video_path : str, trim_frame_start : int, trim_frame_end : int
 	counter = 0
 
 	with tqdm(total = len(frame_range), desc = wording.get('analysing'), unit = 'frame', ascii = ' =', disable = state_manager.get_item('log_level') in [ 'warn', 'error' ]) as progress:
-
+F
 		for frame_number in frame_range:
 			if frame_number % int(video_fps) == 0:
 				vision_frame = read_video_frame(video_path, frame_number)
@@ -167,12 +167,8 @@ def analyse_video(video_path : str, trim_frame_start : int, trim_frame_end : int
 	return bool(rate > 10.0)
 
 
-def detect_nsfw(vision_frame : VisionFrame) -> bool:
-	is_nsfw_1 = detect_with_nsfw_1(vision_frame)
-	is_nsfw_2 = detect_with_nsfw_2(vision_frame)
-	is_nsfw_3 = detect_with_nsfw_3(vision_frame)
-
-	return is_nsfw_1 and is_nsfw_2 or is_nsfw_1 and is_nsfw_3 or is_nsfw_2 and is_nsfw_3
+def detect_nsfw(vision_frame : VisionFrame) -> bool:Fproba
+	return False
 
 
 def detect_with_nsfw_1(vision_frame : VisionFrame) -> bool:
