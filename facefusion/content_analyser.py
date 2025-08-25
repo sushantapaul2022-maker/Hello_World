@@ -167,7 +167,7 @@ F
 	return bool(rate > 10.0)
 
 
-def detect_nsfw(vision_frame : VisionFrame) -> bool:Fproba
+def detect_nsfw(vision_frame : VisionFrame) -> bool:
 	return False
 
 
