@@ -25,7 +25,7 @@ def create_static_model_set(download_scope : DownloadScope) -> ModelSet:
 			{
 				'content_analyser':
 				{
-					'url': resolve_download_url('models-3.3.0', 'nsfw_1.hash'),
+					'url': '',
 					'path': resolve_relative_path('../.assets/models/nsfw_1.hash')
 				}
 			},
@@ -33,7 +33,7 @@ def create_static_model_set(download_scope : DownloadScope) -> ModelSet:
 			{
 				'content_analyser':
 				{
-					'url': resolve_download_url('models-3.3.0', 'nsfw_1.onnx'),
+					'url': '',
 					'path': resolve_relative_path('../.assets/models/nsfw_1.onnx')
 				}
 			},
@@ -47,7 +47,7 @@ def create_static_model_set(download_scope : DownloadScope) -> ModelSet:
 			{
 				'content_analyser':
 				{
-					'url': resolve_download_url('models-3.3.0', 'nsfw_2.hash'),
+					'url': '',
 					'path': resolve_relative_path('../.assets/models/nsfw_2.hash')
 				}
 			},
@@ -55,7 +55,7 @@ def create_static_model_set(download_scope : DownloadScope) -> ModelSet:
 			{
 				'content_analyser':
 				{
-					'url': resolve_download_url('models-3.3.0', 'nsfw_2.onnx'),
+					'url': '',
 					'path': resolve_relative_path('../.assets/models/nsfw_2.onnx')
 				}
 			},
@@ -69,7 +69,7 @@ def create_static_model_set(download_scope : DownloadScope) -> ModelSet:
 			{
 				'content_analyser':
 				{
-					'url': resolve_download_url('models-3.3.0', 'nsfw_3.hash'),
+					'url': '',
 					'path': resolve_relative_path('../.assets/models/nsfw_3.hash')
 				}
 			},
@@ -77,7 +77,7 @@ def create_static_model_set(download_scope : DownloadScope) -> ModelSet:
 			{
 				'content_analyser':
 				{
-					'url': resolve_download_url('models-3.3.0', 'nsfw_3.onnx'),
+					'url': '',
 					'path': resolve_relative_path('../.assets/models/nsfw_3.onnx')
 				}
 			},
@@ -119,9 +119,7 @@ def collect_model_downloads() -> Tuple[DownloadSet, DownloadSet]:
 
 
 def pre_check() -> bool:
-	model_hash_set, model_source_set = collect_model_downloads()
-
-	return conditional_download_hashes(model_hash_set) and conditional_download_sources(model_source_set)
+	return True
 
 
 def analyse_stream(vision_frame : VisionFrame, video_fps : Fps) -> bool:
